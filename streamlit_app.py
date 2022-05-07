@@ -31,7 +31,7 @@ else:
     sec = session_execution_counter()
     sec += 1 # returns one more than it previously was and caches it (as it is related to the cached function with a hash)
     
-st.write('current page views: ' + str(page_views))
+st.write('current page views: ' + str(gpv))
 st.write('current session executions: ' + str(sec))
 
 st.button('rerun')
