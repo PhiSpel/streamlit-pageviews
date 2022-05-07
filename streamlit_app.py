@@ -36,9 +36,9 @@ if not 'session_executions' in st.session_state:
 else:
     sec = session_execution_counter()
     sec += 1
-session_execution_counter(session_executions) # returns one more than previously and caches it
+session_execution_counter(sec) # returns one more than previously and caches it
     
 st.write('current page views: ' + str(page_views))
-st.write('current session executions: ' + str(session_executions))
+st.write('current session executions: ' + str(sec))
 
 st.button('rerun')
