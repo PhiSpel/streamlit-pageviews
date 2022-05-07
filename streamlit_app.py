@@ -1,11 +1,5 @@
 import streamlit as st
 
-
-#@st.cache()
-#def page_view_counter(page_views):
-#    page_view_counter+=1
-#    return page_view_counter
-    
 @st.cache(allow_output_mutation=True)
 def global_page_views():
     gpv = 0 # this will only be run once because after the first execution the cache will be referenced
@@ -35,7 +29,7 @@ if not 'session_executions' in st.session_state:
     st.session_state.session_executions = 'something'
 else:
     sec = session_execution_counter()
-    sec += 1 # returns one more than it previously was and caches it
+    sec += 1 # returns one more than it previously was and caches it (as it is related to the cached function with a hash)
     
 st.write('current page views: ' + str(page_views))
 st.write('current session executions: ' + str(sec))
