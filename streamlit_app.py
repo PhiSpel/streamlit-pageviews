@@ -35,8 +35,7 @@ if not 'session_executions' in st.session_state:
     st.session_state.session_executions = 'something'
 else:
     sec = session_execution_counter()
-    sec += 1
-session_execution_counter(sec) # returns one more than previously and caches it
+    sec += 1 # returns one more than it previously was and caches it
     
 st.write('current page views: ' + str(page_views))
 st.write('current session executions: ' + str(sec))
