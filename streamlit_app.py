@@ -27,12 +27,14 @@ if not 'session_executions' in st.session_state:
     sec_history.append(sec) # append sec from previous session to global counter
     sec = 1 # this will globally set the sec to 1
     st.session_state.session_executions = 'something'
+    st.session_state.gpv = gpv
 else:
     sec = session_execution_counter() # getting gpv from global cache
     sec += 1 # returns one more than it previously was and caches it (as it is related to the cached function with a hash)
-    gpv = global_page_views() # getting gpv from global cache
+    
     
 st.write('current page views: ' + str(gpv))
 st.write('current session executions: ' + str(sec))
+st.write('previous sessen executions: ' + str(sec_history))
 
 st.button('rerun')
