@@ -16,7 +16,7 @@ if 'sec' not in state:
 else:
     state.sec += 1
 
-rerun = st.button("Rerun")
+rerun = st.button("Rerun ")
 
 st.write("Session execution count = ", state.sec)
 st.write("Global page views = ", server_state.gpv)
