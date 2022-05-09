@@ -1,16 +1,16 @@
 import streamlit as st
 
-@st.cache(allow_output_mutation=True)
+@st.cache()
 def global_page_views():
     gpv = 0 # this will only be run once because after the first execution the cache will be referenced
     return gpv
     
-@st.cache(allow_output_mutation=True)
+@st.cache()
 def session_execution_counter():
     sec = 0 # this will only be run once because after the first execution the cache will be referenced
     return sec
 
-@st.cache(allow_output_mutation=True)
+@st.cache()
 def session_execution_counter_history():
     sec_history = [] # this will only be run once because after the first execution the cache will be referenced
     return sec_history
