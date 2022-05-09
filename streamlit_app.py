@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit import session_state as state
+import streamlit_server_state
 from streamlit_server_state import server_state, server_state_lock
 
 st.title("Pageview Counter Example")
