@@ -35,6 +35,6 @@ else:
     
 st.write('current page views: ' + str(gpv))
 st.write('current session executions: ' + str(sec))
-st.write('previous sessen executions: ' + str(sec_history))
+st.write('previous session executions: ' + str(sec_history))
 
 st.button('rerun')
