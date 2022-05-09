@@ -32,6 +32,7 @@ else:
     sec = session_execution_counter() # getting sec from global cache
     sec += 1 # returns one more than it previously was and caches it (as it is related to the cached function with a hash)
     gpv = global_page_views() # getting gpv from global cache
+    sec_history = session_execution_counter_history() # getting sec_history from global cache
     
     
 st.write('current page views: ' + str(gpv))
