@@ -25,9 +25,9 @@ if not 'session_executions' in st.session_state:
     sec = session_execution_counter() # get the sec from previous session
     sec_history = session_execution_counter_history() # get sec history from global cache
 else:
-    sec = session_execution_counter(sec) # getting sec from global cache
+    sec = session_execution_counter() # getting sec from global cache
     gpv = global_page_views()
-    sec_history = session_execution_counter_history(sec_history)
+    sec_history = session_execution_counter_history()
     
     
 st.write('current page views: ' + str(gpv))
